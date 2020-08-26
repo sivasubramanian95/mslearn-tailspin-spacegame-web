@@ -9,10 +9,12 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+# variables:
+#   solution: '**/*.sln'
+#   buildPlatform: 'Any CPU'
+#   buildConfiguration: 'Release'
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+- group: test_var_group
 
 steps:
 - task: NuGetToolInstaller@1
